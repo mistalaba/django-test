@@ -1,0 +1,17 @@
+#!/bin/bash
+# This hook is sourced before this virtualenv is deactivated.
+
+unset DJANGO_SETTINGS_MODULE
+echo "predeactivate: Unset DJANGO_SETTINGS_MODULE"
+# PostgreSQL
+unset POSTGRES_PASSWORD
+unset POSTGRES_USER
+unset POSTGRES_DB
+
+# General settings
+unset DJANGO_DEBUG
+unset DJANGO_ADMIN_URL
+unset DJANGO_SECRET_KEY
+unset DJANGO_ALLOWED_HOSTS
+
+unset META_SITE_PROTOCOL

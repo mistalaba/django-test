@@ -1,0 +1,21 @@
+#!/bin/bash
+
+# This idea is taken from https://gist.github.com/manuganji/9069466 and http://stackoverflow.com/questions/9554087/setting-an-environment-variable-in-virtualenv:
+# virtualenv postactivate and postdeactivate files for django. Place these files at $VIRTUAL_ENV/bin. That is inside the bin folder inside the virtualenv directory
+# Symlink the postactivate and postdeactivate
+
+export DJANGO_SETTINGS_MODULE=settings
+
+# General settings
+export DEBUG=True
+export DJANGO_ADMIN_URL=/admin
+export DJANGO_SECRET_KEY="47GH8w<Twaombe$sD&rY+8$n(Tb?j*!(oOY{,Q2byd^S,;$]%i"
+export DJANGO_ALLOWED_HOSTS=*
+
+export META_SITE_PROTOCOL=http
+
+# YunoJuno specifics
+export TRELLO_API_KEY=db87193ebbb848550b5b615ab8fefa93
+export TRELLO_API_SECRET=d7c340e38578265ef35d393b48c83d8cc473ac84eff0823a4e04f8106fbfd0b6
+export CALLBACK_DOMAIN=a2828b4b.ngrok.io
+export DATABASE_URL=postgres://martin:fee1g00d@localhost:5432/yunojuno
